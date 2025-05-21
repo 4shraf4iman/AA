@@ -1,181 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>A|A</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>A|A - Web Development</title>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Bootstrap & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Swiper & Glightbox (if needed) -->
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Custom Futuristic Styles -->
+  <style>
+    body {
+      background: linear-gradient(120deg, #0d0d0d, #1a1a2e);
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-  <!-- =======================================================
-  * Template Name: DevFolio - v4.7.1
-  * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    a {
+      color: #00f7ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 100px 0;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      text-align: center;
+    }
+
+    .overlay-mf {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      color: #00f7ff;
+      text-shadow: 0 0 15px #00f7ff;
+    }
+
+    .breadcrumb a {
+      color: #ccc;
+    }
+
+    .portfolio-info,
+    .portfolio-description {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .portfolio-info h3,
+    .portfolio-description h2 {
+      color: #00f7ff;
+    }
+
+    .portfolio-info li i {
+      color: #00f7ff;
+      margin-right: 0.5rem;
+    }
+
+    .socials ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      gap: 10px;
+    }
+
+    .socials a {
+      color: #00f7ff;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      color: #ffffff;
+      transform: scale(1.2);
+    }
+
+    .back-to-top {
+      background-color: #00f7ff;
+      color: #000;
+      border-radius: 50%;
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
- <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="index.html">A|A</a></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      
+  <header id="header" class="fixed-top bg-dark border-bottom border-info shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between py-2">
+      <h1 class="logo m-0"><a href="index.html" class="text-info">A|A</a></h1>
 
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-          <li class="dropdown"><a href="#"><span>Topics</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-                  <li><a href="ui_ux_detail.html">UI/UX Design</a></li>
-                  <li><a href="web_development_detail.html">Web Development</a></li>
-                  <li><a href="portfolio_consult_detail.html">Profile Consultation</a></li>
-              
+        <ul class="d-flex gap-3 list-unstyled m-0">
+          <li><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link text-white"><span>Topics</span> <i class="bi bi-chevron-down text-info"></i></a>
+            <ul class="dropdown-menu dropdown-menu-dark bg-dark">
+              <li><a class="dropdown-item text-info" href="ui_ux_detail.html">UI/UX Design</a></li>
+              <li><a class="dropdown-item text-info" href="web_development_detail.html">Web Development</a></li>
+              <li><a class="dropdown-item text-info" href="portfolio_consult_detail.html">Profile Consultation</a></li>
             </ul>
           </li>
-        
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <div class="hero hero-single route bg-image" style="background-image: url(assets/img/background-detail.jpg)">
+  <!-- ======= Hero Section ======= -->
+  <div class="hero hero-single route bg-image" style="background-image: url(assets/img/background-detail.jpg); height: 70vh;">
     <div class="overlay-mf"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <h2 class="hero-title mb-4">Web Development</h2>
-          <ol class="breadcrumb d-flex justify-content-center">
-            <li class="breadcrumb-item">
-              <a href="#">Home</a>
-            </li>
-            <li class="breadcrumb-item active">Web Development</li>
-          </ol>
-        </div>
+    <div class="hero-content d-flex align-items-center justify-content-center h-100">
+      <div class="text-center">
+        <h2 class="hero-title mb-3">Web Development</h2>
+        <ol class="breadcrumb d-flex justify-content-center bg-transparent">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active text-white">Web Development</li>
+        </ol>
       </div>
     </div>
   </div>
 
-  <main id="main">
+  <!-- ======= Main Section ======= -->
+<main id="main" class="container py-5">
+<main id="main" class="container py-5">
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+  <section id="portfolio-details" class="portfolio-details">
 
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/web-detail.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/web-detail-2.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/web-detail-3.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
+    <!-- First row: full width slider -->
+    <div class="row gy-4">
+      <div class="col-12">
+        <div class="portfolio-details-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/web-detail.png" class="img-fluid rounded" alt="">
             </div>
-            <div>My Previous Project : </div>
-            <br>
-           <ul>
-            <li>MFMSBROKER : <a href="https://mfmsbroker.com/">https://mfmsbroker.com/</a></li> 
-            <li>MFMSREWARD : <a href="https://mfmsbroker.com/">https://mfmsreward.com/</a></li>
-            <li>PARTNERS MFMREWARD : <a href="https://partners.mfmsbroker.com/">https://partners.mfmsbroker.com/</a></li>
-            <li>ASV CAPITAL : <a href="https://www.asv-capital.com">https://www.asv-capital.com/</a></li>
-            <li>CRUD Table ( For Fun ) : <a href="https://4shraf4iman-gorestapiwithreact.netlify.app/">https://4shraf4iman-gorestapiwithreact.netlify.app/</a></li>
-            <li>PC Point (Demo) : <a href="https://app.netlify.com/sites/pcpointdemo/overview">https://app.netlify.com/sites/pcpointdemo/overview/</a></li>
-            
-            
-          </ul> 
-
-          </div>
-          
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>My Programming approach :</h3>
-              <ul>
-                <li><i class="bi bi-stars"></i>HTML</li>
-                <li><i class="bi bi-stars"></i>Javascript</li>
-                <li><i class="bi bi-stars"></i>PHP</li>
-                <li><i class="bi bi-stars"></i>MySQL</li> 
-
-              </ul>
+            <div class="swiper-slide">
+              <img src="assets/img/web-detail-2.png" class="img-fluid rounded" alt="">
             </div>
-            <div class="portfolio-description">
-              <h2>How I'm Process Web Development? </h2>
-              <p>
-                After UI/UX complete, I will proceed with the development using Technology Stack Languages, at least suitable with the project requirement.I am mostly work on Front-End Work ( Interface ),but Back-End also will be proceed if needed.
-              </p>
+            <div class="swiper-slide">
+              <img src="assets/img/web-detail-3.jpg" class="img-fluid rounded" alt="">
             </div>
           </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Details Section -->
-
-  </main><!-- End #main -->
-
- 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-        <div>VISIT MY GITHUB : 
-          <div class="socials">
-                      <ul>
-                      
-                        <li><a href="https://github.com/4shraf4iman"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
-                       
-                      </ul>
-                    </div>
+          <div class="swiper-pagination mt-3"></div>
         </div>
       </div>
     </div>
 
+    <!-- Projects section full width -->
+    <div class="mt-5">
+      <h5 class="text-info mb-3">My Previous Projects:</h5>
+      <div class="row g-4">
+        <!-- Repeat for each project -->
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark" style="max-width: 100%; overflow: hidden;">
+          <div style="width: 100%; height: 200px; overflow: hidden;">
+            <iframe 
+              src="https://sniurban.com.my/" 
+              style="width: 100%; height: 100%; border: 0; transform: scale(0.8); transform-origin: top left;" 
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin allow-forms"
+            ></iframe>
+          </div>
+          <p class="text-white text-center mt-2">S&I Urban</p>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://www.myparcelasia.com/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">MyParcel Asia</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://sendagent.my/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">SendAgent</p>
+          </div>
+        </div>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://mfmsbroker.com/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">MFMSBROKER</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://mfmsreward.com/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">MFMSREWARD</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://partners.mfmsbroker.com/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">Partners MFMREWARD</p>
+          </div>
+        </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://www.asv-capital.com" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">ASV CAPITAL</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://4shraf4iman-gorestapiwithreact.netlify.app/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">CRUD Demo</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://pcpointdemo.netlify.app/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">PC Point Demo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+    <!-- New row for Programming Approach and Description -->
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <div class="portfolio-info">
+          <h3>My Programming Approach</h3>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-stars"></i> HTML</li>
+            <li><i class="bi bi-stars"></i> JavaScript</li>
+            <li><i class="bi bi-stars"></i> PHP</li>
+            <li><i class="bi bi-stars"></i> MySQL</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="portfolio-description">
+          <h2>How I Process Web Development</h2>
+          <p>
+            After UI/UX is finalized, I develop using suitable tech stacks that match project requirements. I specialize in front-end development (interface), but I also handle back-end tasks when needed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+
+
+  <!-- ======= Footer / GitHub ======= -->
+  <div class="container text-center my-4">
+    <h5>Visit My GitHub:</h5>
+    <div class="socials d-flex justify-content-center">
+      <ul>
+        <li><a href="https://github.com/4shraf4iman"><i class="bi bi-github"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short fs-4"></i></a>
+
+  <!-- Scripts -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script>
+    new Swiper('.swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true
+    });
+  </script>
 </body>
-
 </html>
