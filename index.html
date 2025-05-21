@@ -1,582 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-  <title>A|A</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>A|A - Web Development</title>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Bootstrap & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Swiper & Glightbox (if needed) -->
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
+  <!-- Custom Futuristic Styles -->
+  <style>
+    body {
+      background: linear-gradient(120deg, #0d0d0d, #1a1a2e);
+      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-  <link href="assets/css/style.css" rel="stylesheet">
+    a {
+      color: #00f7ff;
+      text-decoration: none;
+    }
 
+    a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
 
+    .hero {
+      padding: 100px 0;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      text-align: center;
+    }
+
+    .overlay-mf {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      color: #00f7ff;
+      text-shadow: 0 0 15px #00f7ff;
+    }
+
+    .breadcrumb a {
+      color: #ccc;
+    }
+
+    .portfolio-info,
+    .portfolio-description {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      margin-bottom: 1.5rem;
+    }
+
+    .portfolio-info h3,
+    .portfolio-description h2 {
+      color: #00f7ff;
+    }
+
+    .portfolio-info li i {
+      color: #00f7ff;
+      margin-right: 0.5rem;
+    }
+
+    .socials ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      gap: 10px;
+    }
+
+    .socials a {
+      color: #00f7ff;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      color: #ffffff;
+      transform: scale(1.2);
+    }
+
+    .back-to-top {
+      background-color: #00f7ff;
+      color: #000;
+      border-radius: 50%;
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="index.html">A|A</a></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      
+  <header id="header" class="fixed-top bg-dark border-bottom border-info shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between py-2">
+      <h1 class="logo m-0"><a href="index.html" class="text-info">A|A</a></h1>
 
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#work">Work</a></li>
-          <li class="dropdown"><a href="#"><span>Topics</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-                  <li><a href="ui_ux_detail.html">UI/UX Design</a></li>
-                  <li><a href="web_development_detail.html">Web Development</a></li>
-                  <li><a href="portfolio_consult_detail.html">Profile Consultation</a></li>
-               
-             
+        <ul class="d-flex gap-3 list-unstyled m-0">
+          <li><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="nav-link text-white"><span>Topics</span> <i class="bi bi-chevron-down text-info"></i></a>
+            <ul class="dropdown-menu dropdown-menu-dark bg-dark">
+              <li><a class="dropdown-item text-info" href="ui_ux_detail.html">UI/UX Design</a></li>
+              <li><a class="dropdown-item text-info" href="web_development_detail.html">Web Development</a></li>
+              <li><a class="dropdown-item text-info" href="portfolio_consult_detail.html">Profile Consultation</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">I am Ashraf,</h1>
+  <div class="hero hero-single route bg-image" style="background-image: url(assets/img/background-detail.jpg); height: 70vh;">
+    <div class="overlay-mf"></div>
+    <div class="hero-content d-flex align-items-center justify-content-center h-100">
+      <div class="text-center">
+        <h2 class="hero-title mb-3">Web Development</h2>
+        <ol class="breadcrumb d-flex justify-content-center bg-transparent">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active text-white">Web Development</li>
+        </ol>
+      </div>
+    </div>
+  </div>
 
-          <p class="hero-subtitle"><span class="typed" data-typed-items=" Web Developer, Freelancer, Audio Engineer"></span></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+  <!-- ======= Main Section ======= -->
+<main id="main" class="container py-5">
+<main id="main" class="container py-5">
+
+  <section id="portfolio-details" class="portfolio-details">
+
+    <!-- First row: full width slider -->
+    <div class="row gy-4">
+      <div class="col-12">
+        <div class="portfolio-details-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/web-detail.png" class="img-fluid rounded" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/web-detail-2.png" class="img-fluid rounded" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/web-detail-3.jpg" class="img-fluid rounded" alt="">
+            </div>
+          </div>
+          <div class="swiper-pagination mt-3"></div>
         </div>
       </div>
     </div>
-  </div><!-- End Hero Section -->
 
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/testimonial- 2.png" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Ashraf Aiman</span></p>
-                        <p><span class="title-s">Profile: </span> <span>Web Developer</span></p>
-                        <p><span class="title-s">Email: </span> <span>4shraf4iman@gmail.com</span></p>
-                        <p><span class="title-s">Phone: </span> <span>(601) 6881-3851</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>HTML</span> <span class="pull-right">100%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>CSS</span> <span class="pull-right">75%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>PHP</span> <span class="pull-right">70%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVA</span> <span class="pull-right">60%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>REACTJS </span> <span class="pull-right">70%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      Innovative tech mind with recent years of experience working as a
-web programmer. Capable of working with a variety of technology
-and software solutions, and managing databases. Valuable team
-member who has experience diagnosing problems and developing
-solutions. Extensive expertise in professional quality front-end
-Web Development . Talented leader and student with unique ideas
-and a history of successful contributions in the field
-                    </p>
-                                        
-                  </div>
-                </div>
-                  <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div>Download/View My Resume Here :  <div class="socials">
-                      <ul>
-                      
-                        <li><a href="https://drive.google.com/file/d/1w2z3T5Vg-BIajcnZI6BMJZp91q4ExOqJ/view?usp=sharing"><button type="button" class="btn btn-outline-danger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
-  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
-</svg>
-                Download/View
-              </button></a></li>
-                       
-                      </ul>
-                    </div>
-                  </div>
-
+    <!-- Projects section full width -->
+    <div class="mt-5">
+      <h5 class="text-info mb-3">My Previous Projects:</h5>
+      <div class="row g-4">
+        <!-- Repeat for each project -->
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark" style="max-width: 100%; overflow: hidden;">
+          <div style="width: 100%; height: 200px; overflow: hidden;">
+            <iframe 
+              src="https://sniurban.com.my/" 
+              style="width: 100%; height: 100%; border: 0; transform: scale(0.8); transform-origin: top left;" 
+              loading="lazy"
+              sandbox="allow-scripts allow-same-origin allow-forms"
+            ></iframe>
+          </div>
+          <p class="text-white text-center mt-2">S&I Urban</p>
         </div>
-      </div>
-    </div>
-              </div>
-            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://www.myparcelasia.com/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">MyParcel Asia</p>
           </div>
         </div>
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services-mf pt-5 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Services
-              </h3>
-              <p class="subtitle-a">
-                My Services and Job Scope
-              </p>
-              <div class="line-mf"></div>
-            </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://sendagent.my/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">SendAgent</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-ui-checks-grid"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">UI/UX Design</h2>
-                <p class="s-description text-center">
-                  The UI/UX Design Specialization brings a design-centric approach to user interface and user experience design, and offers practical,and skill-based instruction. 
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-globe"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Development</h2>
-                <p class="s-description text-center">
-                  Creating, building, and maintaining websites and web applications that run online on a browser,which include web design, web programming, and database management.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-file-earmark-easel-fill"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Portfolio Consultation</h2>
-                <p class="s-description text-center">
-                  Build a custom professional portfolios and documentation of company profile based on the client's company detail.These portfolio are written in a digital document.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-collection-play"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Media Editing</h2>
-                <p class="s-description text-center">
-                   Media creation, editing or written, photographic, visual, audible, or cinematic material as requested by client such as poster,banner or even business card
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-music-note-list"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Audio Mixing and Production</h2>
-                <p class="s-description text-center">
-                  Audio Creation include Recording, editing, mixing, and mastering audio in Rock and Heavy Music
-                </p>
-                <br>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Digital Marketing</h2>
-                <p class="s-description text-center">
-                  Connect with potential client using the internet and other digital communication web-based such as SEO, E-Commerce and also Advertisement.
-                </p>
-              </div>
-            </div>
+
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://mfmsbroker.com/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">MFMSBROKER</p>
           </div>
         </div>
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.gif)">
-      <div class="overlay-mf"></div>
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-check"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="+50" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">WORKS COMPLETED</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-journal-richtext"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">YEARS OF EXPERIENCE</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-people"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">TOTAL CLIENTS</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-chat-quote"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1" class="counter purecounter"></p>
-                <span class="counter-text">Feedback</span>
-              </div>
-            </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://mfmsreward.com/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">MFMSREWARD</p>
           </div>
         </div>
-      </div>
-    </div><!-- End Counter Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                More Details
-              </h3>
-              <p class="subtitle-a">
-                Check out the tools for the services
-              </p>
-              <div class="line-mf"></div>
-            </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://partners.mfmsbroker.com/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">Partners MFMREWARD</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-1.jfif" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title"><a href="ui_ux_detail.html">UI / UX Design</a></h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">User Experience Design </span></span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="ui_ux_detail.html"> <span class="bi bi-arrow-right-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-2.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title"><a href="web_development_detail.html">Web Development</a></h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Front-End & Back-End</span></span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="web_development_detail.html"> <span class="bi bi-arrow-right-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-3.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title"><a href="portfolio_consult_detail.html">Portfolio Consultation</a></h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Portfolio Documentation Services</span></span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio_consult_detail.html"> <span class="bi bi-arrow-right-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-         
-        </div>
-      </div>
-    </section><!-- End Portfolio Section -->
 
-   
-   
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Hit me up!
-                      </h5>
-                    </div>
-                    <div>
-                      <form method="post" id="frmContact" >
-                        <div class="row">
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group" >
-                              <input type="text" name="fname" class="form-control" id="fname" placeholder="Your Name" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center my-3">
-                          
-                            <div class="error-message"></div>
-                           
-                          </div>
-                          <div class="col-md-12 text-center">
-                            <button type="submit" name="submit" class="button button-a button-big button-rouded" data-toggle="modal" data-target="#exampleModal">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Get in Touch
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <p class="lead">
-                        Feel free to fill up the form if you have any enquiries or question.Also you can contact me anytime, I will be in touch.Keep connected and thank you for visiting my page!
-                      </p>
-                      <ul class="list-ico">
-                        <li><span class="bi bi-geo-alt"></span> Kuantan,Pahang. </li>
-                        <li><span class="bi bi-phone"></span> (601) 68813851</li>
-                        <li><span class="bi bi-envelope"></span> 4shraf4iman@gmail.com</li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li><a href="https://www.facebook.com/4shraf4iman"><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
-                        <li><a href="https://www.instagram.com/ac.ashraff/"><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
-                        <li><a href="https://github.com/4shraf4iman"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
-                        <li><a href="https://my.linkedin.com/in/4shraf4iman"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://www.asv-capital.com" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">ASV CAPITAL</p>
           </div>
         </div>
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-        
-    
-            </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://4shraf4iman-gorestapiwithreact.netlify.app/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">CRUD Demo</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="border border-info rounded-3 p-2 bg-dark">
+            <iframe src="https://pcpointdemo.netlify.app/" width="100%" height="250" style="border:0;" loading="lazy"></iframe>
+            <p class="text-white text-center mt-2">PC Point Demo</p>
           </div>
         </div>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+      </div>
+    </div>
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- New row for Programming Approach and Description -->
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <div class="portfolio-info">
+          <h3>My Programming Approach</h3>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-stars"></i> HTML</li>
+            <li><i class="bi bi-stars"></i> JavaScript</li>
+            <li><i class="bi bi-stars"></i> PHP</li>
+            <li><i class="bi bi-stars"></i> MySQL</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
+      <div class="col-lg-6">
+        <div class="portfolio-description">
+          <h2>How I Process Web Development</h2>
+          <p>
+            After UI/UX is finalized, I develop using suitable tech stacks that match project requirements. I specialize in front-end development (interface), but I also handle back-end tasks when needed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+
+
+  <!-- ======= Footer / GitHub ======= -->
+  <div class="container text-center my-4">
+    <h5>Visit My GitHub:</h5>
+    <div class="socials d-flex justify-content-center">
+      <ul>
+        <li><a href="https://github.com/4shraf4iman"><i class="bi bi-github"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Back to Top -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short fs-4"></i></a>
+
+  <!-- Scripts -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
-  <script src="app.js"></script>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
-     
-    // Paste the code from Firebase
-    const firebaseConfig = {
-      apiKey: "AIzaSyD5M5QGXmiaOjdgbnsoApK0u3XWu5ZPfrc",
-  authDomain: "ashrafaimannetlify.firebaseapp.com",
-  databaseURL: "https://ashrafaimannetlify-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "ashrafaimannetlify",
-  storageBucket: "ashrafaimannetlify.appspot.com",
-  messagingSenderId: "256415411778",
-  appId: "1:256415411778:web:140add27036775be5ec7db",
-  measurementId: "G-NE1H5MF6NK"
-    };
-     
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-     
-    // Get a reference to the database service
-    const db = getDatabase(app);
-     
-    document.getElementById('frmContact').addEventListener('submit', function(e) {
-        e.preventDefault();
-        set(ref(db, 'formData/' + Math.random().toString(36).slice(2, 7)), {
-            name: document.getElementById('fname').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        });
-     
-        alert('Your form is submitted to Ashraf!');
-        document.getElementById('frmContact').reset();
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script>
+    new Swiper('.swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true
     });
-    </script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  </script>
 </body>
-
 </html>
