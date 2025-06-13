@@ -109,6 +109,56 @@ body {
   position: relative;
 }
 
+.timeline-container {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #0d6efd; /* Bootstrap primary */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  color: #e0e0e0; /* Light text for dark bg */
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -12px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background-color: #0d6efd;
+  border-radius: 50%;
+  border: 3px solid #121212; /* Match dark background */
+  box-shadow: 0 0 0 2px #0d6efd;
+}
+
+.timeline-content {
+  background: #1e1e1e; /* Dark card background */
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin-left:20px;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-2px);
+}
+
+.timeline-content h6,
+.timeline-content p,
+.timeline-content ul,
+.timeline-content a {
+  color: #e0e0e0; /* Light text */
+}
+
+.timeline-content a {
+  text-decoration: underline;
+  color: #61dafb;
+}
+ 
 .dropdown-menu {
   position: absolute;
   top: 140%;
@@ -238,7 +288,6 @@ body {
 
 .resume-button {
   display: inline-block;
-  margin-top: 2rem;
   padding: 0.8rem 1.5rem;
   border: 1px solid #00f0ff;
   color: #00f0ff;
@@ -427,7 +476,7 @@ body {
 
 
   <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg.jpg)">
+  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg-1.jpeg)">
     <div class="overlay-itro"></div>
     <div class="hero-content display-table">
       <div class="table-cell">
@@ -435,7 +484,7 @@ body {
           <!--<p class="display-6 color-d">Hello, world!</p>-->
           <h1 class="hero-title mb-4">I am Ashraf,</h1>
 
-          <p class="hero-subtitle"><span class="typed" data-typed-items=" Web Developer, Freelancer, Audio Engineer"></span></p>
+          <p class="hero-subtitle"><span class="typed" data-typed-items=" Web Developer"></span></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
         </div>
       </div>
@@ -453,15 +502,16 @@ body {
               <div class="profile-image">
                 <img src="assets/img/testimonial- 2.png" alt="Ashraf Aiman">
               </div>
-              <div class="info-block">
+              <div class="info-block mt-4">
                 <p><strong>Name:</strong> Ashraf Aiman</p>
                 <p><strong>Profile:</strong> Web Developer</p>
                 <p><strong>Email:</strong> 4shraf4iman@gmail.com</p>
                 <p><strong>Phone:</strong> (601) 6881-3851</p>
               </div>
 
-              <div class="skills-block">
-                <h4>Skills</h4>
+            
+              <div class="skills-block mt-4">
+                <h2 class="text-light">Skills</h2>
                 <div class="skill">
                   <span>HTML</span>
                   <div class="bar"><div style="width: 100%"></div></div>
@@ -496,10 +546,77 @@ body {
                 Experienced team player and problem solver with a passion for clean front-end development. Driven leader and student with creative ideas and a record of impactful contributions.
               </p>
 
-              <a class="resume-button" href="https://drive.google.com/file/d/1w2z3T5Vg-BIajcnZI6BMJZp91q4ExOqJ/view?usp=sharing" target="_blank">
+              <a class="resume-button" href="https://drive.google.com/file/d/1GSicdsh2zYka0trNNh55LKaI2pSzyrJV/view?usp=sharing" target="_blank">
                 <i class="bi bi-download"></i> Download Résumé
               </a>
+
+              <h2 class="mt-4">Work Experience</h2>
+              <div class="work-experience">
+                <div class="">
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <h6>MyParcelAsia <span class="text-muted small">Sep 2024 – Present</span></h6>
+                      <p class="mb-1"><strong>Fullstack Developer</strong> — TTDI, KL</p>
+                      <ul class="small mb-0">
+                        <li>Shipment system for agents and couriers</li>
+                        <li>VueJS, PHP Laravel</li>
+                      </ul>
+                    </div>
+                  </div>
+              
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <h6>S&I Urban Designers <span class="text-muted small">Mar 2023 – Sep 2024</span></h6>
+                      <p class="mb-1"><strong>Fullstack Developer</strong> — Batu Caves, Selangor</p>
+                      <ul class="small mb-0">
+                        <li>Online tutoring & ticketing systems</li>
+                        <li>VueJS, Laravel</li>
+                      </ul>
+                    </div>
+                  </div>
+              
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <h6>Aster Synergy Ventures <span class="text-muted small">Mar 2022 – Feb 2023</span></h6>
+                      <p class="mb-1"><strong>ReactJS & WordPress Developer</strong> — Kota Damansara</p>
+                      <ul class="small mb-0">
+                        <li>Reward claim & forex systems</li>
+                      </ul>
+                    </div>
+                  </div>
+              
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <h6>BerjayaTech Solution <span class="text-muted small">Jan 2021 – Feb 2022</span></h6>
+                      <p class="mb-1"><strong>Web Developer</strong> — Kuantan, Pahang</p>
+                      <ul class="small mb-0">
+                        <li>E-commerce and client websites</li>
+                        <li>Client consultation</li>
+                      </ul>
+                    </div>
+                  </div>
+              
+                  <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                      <h6>Infopro Sdn Bhd <span class="text-muted small">Aug 2018 – Aug 2019</span></h6>
+                      <p class="mb-1"><strong>Web Developer</strong> — Petaling Jaya</p>
+                      <ul class="small mb-0">
+                        <li>KPI Staff System, WordPress, Ionic</li>
+                      </ul>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
+              
+            
             </div>
+           
           </div>
         </div>
       </div>
@@ -568,28 +685,28 @@ body {
     </section>
 
     <!-- 🔢 Modern Counter Section -->
-    <section class="counter-section" style="background-image: url('assets/img/counters-bg.gif')">
+    <section class="counter-section" style="background-image: url(assets/img/hero-bg-2.jpeg)">
       <div class="overlay"></div>
       <div class="container">
         <div class="row text-center">
           <div class="col-6 col-md-3 counter-box" data-aos="zoom-in">
             <i class="bi bi-check"></i>
-            <h3><span class="purecounter" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"></span>+</h3>
+            <h3><span class="purecounter text-light" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"></span>+</h3>
             <p>Projects Completed</p>
           </div>
           <div class="col-6 col-md-3 counter-box" data-aos="zoom-in" data-aos-delay="200">
             <i class="bi bi-journal-richtext"></i>
-            <h3><span class="purecounter" data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1"></span></h3>
+            <h3><span class="purecounter text-light " data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1"></span></h3>
             <p>Years Experience</p>
           </div>
           <div class="col-6 col-md-3 counter-box" data-aos="zoom-in" data-aos-delay="400">
             <i class="bi bi-people"></i>
-            <h3><span class="purecounter" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"></span>+</h3>
+            <h3><span class="purecounter text-light" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"></span>+</h3>
             <p>Happy Clients</p>
           </div>
           <div class="col-6 col-md-3 counter-box" data-aos="zoom-in" data-aos-delay="600">
             <i class="bi bi-chat-quote"></i>
-            <h3><span class="purecounter" data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1"></span>+</h3>
+            <h3><span class="purecounter text-light" data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="1"></span>+</h3>
             <p>Client Feedback</p>
           </div>
         </div>
